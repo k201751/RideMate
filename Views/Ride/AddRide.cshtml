@@ -1,0 +1,34 @@
+﻿@model RideMate.Models.Ride
+
+<h2>Add Ride</h2>
+<form asp-controller="Ride" asp-action="AddRide" method="post">
+    <div>
+        <label for="StartingLocation">Starting Location:</label>
+        <input type="text" id="StartingLocation" name="StartingLocation" />
+    </div>
+
+    <div>
+        <label for="Destination">Destination:</label>
+        <input type="text" id="Destination" name="Destination" />
+    </div>
+
+    <div>
+        <label for="Date">Date:</label>
+        <input type="date" id="Date" name="Date" />
+    </div>
+
+    <div>
+        <label for="Time">Time:</label>
+        <input type="time" id="Time" name="Time" />
+    </div>
+
+    <div>
+        <label for="AvailableSeats">Available Seats:</label>
+        <input type="number" id="AvailableSeats" name="AvailableSeats" />
+    </div>
+
+    <div>
+        <button type="submit">Add Ride</button>
+    </div>
+</form>
+

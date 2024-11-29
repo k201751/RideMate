@@ -1,0 +1,62 @@
+﻿
+@model List<RideMate.Models.Ride>
+
+<h2>Available Rides</h2>
+<table>
+    <thead>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            <table>
+                <thead>
+                    <tr>
+                        <th>Starting Location </th>
+                        <th>Destination </th>
+                        <th>Date </th>
+                        <th>Time </th>
+                        <th>Available Seats </th>
+                        <th>Actions </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var ride in Model)
+                    {
+                        <tr>
+                            <td>@ride.StartingLocation</td>
+                            <td>@ride.Destination</td>
+                            <td>@ride.Date.ToShortDateString()</td>
+                            <td>@ride.Time.ToString()</td>
+                            <td>@ride.AvailableSeats</td>
+                            <td>
+                                <a asp-controller="Ride" asp-action="UpdateRide" asp-route-id="@ride.Id">Edit</a> |
+                                <a asp-controller="Ride" asp-action="DeleteRide" asp-route-id="@ride.Id"
+                                   onclick="return confirm('Are you sure you want to delete this ride?');">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p>No rides available.</p>
+        }
+    </tbody>
+</table>
+<a href="@Url.Action("AddRide")">Add New Ride</a>
+<!--
+@foreach (var ride in Model)
+{
+    <tr>
+        <td>@ride.StartingLocation</td>
+        <td>@ride.Destination</td>
+        <td>@ride.Date</td>
+        <td>@ride.Time</td>
+        <td>@ride.AvailableSeats</td>
+        <td>
+            <a asp-controller="Ride" asp-action="UpdateRide" asp-route-id="@ride.Id">Edit</a>
+        </td>
+    </tr>
+}
+-->
