@@ -32,3 +32,4 @@ C:\Users\Ali\source\repos\RideMate\RideMate\obj\Debug\net8.0\refint\RideMate.dll
 C:\Users\Ali\source\repos\RideMate\RideMate\obj\Debug\net8.0\RideMate.pdb
 C:\Users\Ali\source\repos\RideMate\RideMate\obj\Debug\net8.0\RideMate.genruntimeconfig.cache
 C:\Users\Ali\source\repos\RideMate\RideMate\obj\Debug\net8.0\ref\RideMate.dll
+C:\Users\Ali\source\repos\RideMate\RideMate\obj\Debug\net8.0\RideMate.sourcelink.json
